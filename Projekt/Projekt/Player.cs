@@ -8,17 +8,19 @@ namespace Projekt
 {
     class Player
     {
-        public int Heightmax = 230;
-        public int Heightmin = 175;
-        public int Weightmax = 145;
-        public int Weightmin = 75;
-        public int Wingspan;
-        public string Takeover;
-        public string Name;
+        public int height;
+        public int weight;
+        public int wingspan;
+        public string takeover;
+        public string name;
 
 
 
-
+        // Lebron
+        // Curry
+        // Kawhi
+        // PG
+        // Giannis
 
 
 

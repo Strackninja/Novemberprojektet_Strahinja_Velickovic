@@ -8,5 +8,11 @@ namespace Projekt
 {
     class SmallForward : Player
     {
+
+        public void LebronJames()
+        {
+
+        }
+
     }
 }
