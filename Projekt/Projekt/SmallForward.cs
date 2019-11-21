@@ -11,6 +11,11 @@ namespace Projekt
 
         public void LebronJames()
         {
+            height = 203;
+            wingspan = 214;
+            weight = 113;
+            takeover = "playmaking";
+
 
         }
 
