@@ -8,6 +8,7 @@ namespace Projekt
 {
     class SmallForward : Player
     {
+        //Tänkte först göra spelet på detta vis men kom sedan på att man kan använda sig av constructors
 
         public void LebronJames()
         {

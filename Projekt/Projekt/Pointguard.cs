@@ -8,7 +8,7 @@ namespace Projekt
 {
     class PointGuard : Player
     {
-
+        //Tänkte först göra spelet på detta vis men kom sedan på att man kan använda sig av constructors
         public void KyrieErving()
         {
             height = 188;

@@ -16,9 +16,9 @@ namespace Projekt
             Player sg = new ShootingGuard();
             Player sf = new SmallForward();
             //Datorns spelare
-            Player cpg = new PointGuard();
-            Player csg = new ShootingGuard();
-            Player csf = new SmallForward();
+           // Player cpg = new PointGuard();
+           // Player csg = new ShootingGuard();
+            //Player csf = new SmallForward();
 
             // idé till spel
             // Du ska skapa din egna basketspelare likt Myplayer funktionen i alla NBA2K spel. 
@@ -36,6 +36,7 @@ namespace Projekt
             // Sedan ska spelet skapa ett mellanvärde av alla stats och utse en vinnare med hjälp av det
 
             Console.WriteLine("MAKE YOUR OWN 3");
+            //Sätter en delay på texten
             Thread.Sleep(600);
             Console.WriteLine("PRESS ENTER TO CONTINUE");
             Console.ReadLine();
@@ -48,6 +49,7 @@ namespace Projekt
             Thread.Sleep(600);
             Console.WriteLine("PRESS ENTER TO CONTINUE");
             Console.ReadLine();
+            //Rensar konsolen
             Console.Clear();
 
             Console.WriteLine("The first thing you are going to do is choose a PointGuard");
@@ -61,18 +63,19 @@ namespace Projekt
             Console.WriteLine("Damian Lillard");
             Thread.Sleep(600);
             Console.WriteLine("Now its time for you to choose a player");
-            Console.WriteLine("Please write the first name of the pointguard that you want to select!");
-            string pointanswer = Console.ReadLine(); ;
+            Console.WriteLine("Please enter a number between 1-3 to choose a player!");
+            int pointanswer = Answers();
 
-            if (pointanswer == "Kyrie")
+            //Det första valet spelaren gör, spelaren väljer 1 pointguard utav 3 genom att skriva en siffra mellan 1-3
+            if (pointanswer == 1)
             {
                 pg = new Kyrie();
             }
-            else if(pointanswer == "Russel")
+            else if(pointanswer == 2)
             {
                 pg = new Russel();
             }
-            else if(pointanswer == "Damian")
+            else if(pointanswer == 3)
             {
                 pg = new Damian();
             }
@@ -81,21 +84,36 @@ namespace Projekt
             Thread.Sleep(600);
             Console.WriteLine("These are your players stats: ");
             Thread.Sleep(600);
+            //Kallar på metoden i Player som printar ut statsen för spelaren
             pg.Getstats();
+            Console.ReadLine();
+            Console.Clear();
 
 
             Console.WriteLine("It is time to choose a ShootinGguard");
-            string shootinganswer = Console.ReadLine();
-
-            if (shootinganswer == "James")
+            Thread.Sleep(600);
+            Console.WriteLine("The ShootingGuards you can choose from are");
+            Thread.Sleep(600);
+            Console.WriteLine("James Harden");
+            Thread.Sleep(600);
+            Console.WriteLine("Donovan Mitchell");
+            Thread.Sleep(600);
+            Console.WriteLine("Devin Booker");
+            Thread.Sleep(600);
+            Console.WriteLine("Now its time for you to choose a player");
+            Thread.Sleep(600);
+            Console.WriteLine("Please enter a number between 1-3 to choose a player!");
+            int shootinganswer = Answers();
+            //Samma sak som för pointguard men för shootingguard
+            if (shootinganswer == 1)
             {
                 sg = new James();
             }
-            else if (shootinganswer == "Donovan")
+            else if (shootinganswer == 2)
             {
                 sg = new Donovan();
             }
-            else if (shootinganswer == "Devin")
+            else if (shootinganswer == 3)
             {
                 sg = new Devin();
             }
@@ -105,19 +123,33 @@ namespace Projekt
             Console.WriteLine("These are your players stats: ");
             Thread.Sleep(600);
             sg.Getstats();
+            Console.ReadLine();
+            Console.Clear();
 
             Console.WriteLine("And finally, time to choose a SmallForward");
-            string smallanswer = Console.ReadLine();
-
-            if (smallanswer == "Lebron")
+            Thread.Sleep(600);
+            Console.WriteLine("The SmallForwards you can choose from are");
+            Thread.Sleep(600);
+            Console.WriteLine("Lebron James");
+            Thread.Sleep(600);
+            Console.WriteLine("Kawhi Leonard");
+            Thread.Sleep(600);
+            Console.WriteLine("Luka Doncic");
+            Thread.Sleep(600);
+            Console.WriteLine("Now its time for you to choose a player");
+            Thread.Sleep(600);
+            Console.WriteLine("Please enter a number between 1-3 to choose a player!");
+            int smallanswer = Answers();
+            //samma sak som för pointguard men för SmallForward
+            if (smallanswer == 1)
             {
                 sf = new Lebron();
             }
-            else if (smallanswer == "Kawhi")
+            else if (smallanswer == 2)
             {
                 sf = new Kawhi();
             }
-            else if (smallanswer == "Luka")
+            else if (smallanswer == 3)
             {
                 sf = new Luka();
             }
@@ -127,16 +159,27 @@ namespace Projekt
             Console.WriteLine("These are your players stats: ");
             Thread.Sleep(600);
             sf.Getstats();
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("This is your final team:");
+            Thread.Sleep(600);
+            Console.WriteLine(pg.name);//Printar ut pointguardens namn
+            Thread.Sleep(600);
+            Console.WriteLine(sg.name);//Printar ut shootingguardens namn
+            Thread.Sleep(600);
+            Console.WriteLine(sf.name);//Printar ut smallforwardens namn
 
             Console.ReadLine();
         }
-
-        static int Answers()
+        // En metod som kontrollerar ifall spelaren väljer en siffra mellan 1-3
+        // Ifall spelaren väljer en siffra som inte är mellan 1-3 kommer spelet att fråga om ett svar igen
+        static int Answers() 
         {
-            int playerchoice = 0;
-            string playeranswer = Console.ReadLine();
-            int.TryParse(playeranswer, out playerchoice);
-            bool correct = int.TryParse(playeranswer, out playerchoice);
+            int playerchoice = 0;//Det värde som kommer att användas i val av spelare
+            string playeranswer = Console.ReadLine();//Spelarens input
+            int.TryParse(playeranswer, out playerchoice);//Konverterar spelarens string input till en int
+            bool correct = int.TryParse(playeranswer, out playerchoice);//Ser till att konverteringen blev korrekt
 
             while (correct == false || playerchoice != 1 && playerchoice != 2 && playerchoice != 3)
             {
@@ -147,15 +190,15 @@ namespace Projekt
                 correct = int.TryParse(playeranswer, out playerchoice);
             } 
 
-            if (playerchoice == 1)
+            if (playerchoice == 1)//Ifall spelaren klickar 1 kommer spelet returnera värdet 1 och välja den första spelaren
             {
                 return 1;
             }
-            else if (playerchoice == 2)
+            else if (playerchoice == 2)// Samma sak fast för 2
             {
                 return 2;
             }
-            else if (playerchoice == 3)
+            else if (playerchoice == 3)//Samma sak fast för 3
             {
                 return 3;
             }
