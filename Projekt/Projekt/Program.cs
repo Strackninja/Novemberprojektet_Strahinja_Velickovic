@@ -136,8 +136,37 @@ namespace Projekt
             int playerchoice = 0;
             string playeranswer = Console.ReadLine();
             int.TryParse(playeranswer, out playerchoice);
-            bool true = int
+            bool correct = int.TryParse(playeranswer, out playerchoice);
+
+            while (correct == false || playerchoice != 1 && playerchoice != 2 && playerchoice != 3)
+            {
+                Console.WriteLine("Please enter a number between 1-3");
+
+                playerchoice = 0;
+                playeranswer = Console.ReadLine();
+                correct = int.TryParse(playeranswer, out playerchoice);
+            } 
+
+            if (playerchoice == 1)
+            {
+                return 1;
+            }
+            else if (playerchoice == 2)
+            {
+                return 2;
+            }
+            else if (playerchoice == 3)
+            {
+                return 3;
+            }
+
+            return 0;
+
         }
+
+            
+
+
 
 
     }
