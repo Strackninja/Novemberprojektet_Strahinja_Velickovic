@@ -44,11 +44,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Center.cs" />
+    <Compile Include="Pointguards\Damian.cs" />
+    <Compile Include="shootingguards\Devin.cs" />
+    <Compile Include="shootingguards\Donovan.cs" />
+    <Compile Include="shootingguards\James.cs" />
+    <Compile Include="Smallforwards\Kawhi.cs" />
+    <Compile Include="Pointguards\Kyrie.cs" />
+    <Compile Include="Smallforwards\Lebron.cs" />
+    <Compile Include="Smallforwards\Luka.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PointGuard.cs" />
     <Compile Include="PowerForward.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pointguards\Russel.cs" />
     <Compile Include="ShootingGuard.cs" />
     <Compile Include="SmallForward.cs" />
   </ItemGroup>

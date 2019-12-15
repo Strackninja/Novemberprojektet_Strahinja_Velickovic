@@ -14,8 +14,9 @@ namespace Projekt
             height = 188;
             wingspan = 193;
             weight = 88;
-            takeover = "playmaking";
+            takeover = "Playmaking";
             name = "Kyrie Erving";
+            Getstats();
         }
 
         public void RusselWestbrook()
@@ -25,6 +26,7 @@ namespace Projekt
             weight = 91;
             takeover = "Slashing";
             name = "Russel Westbrook";
+            Getstats();
         }
 
         public void DamianLillard()
@@ -34,6 +36,7 @@ namespace Projekt
             weight = 88;
             takeover = "Shooting";
             name = "Damian Lillard";
+            Getstats();
         }
 
     }

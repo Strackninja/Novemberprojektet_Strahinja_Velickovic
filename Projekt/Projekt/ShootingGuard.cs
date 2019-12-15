@@ -16,6 +16,7 @@ namespace Projekt
             weight = 100;
             takeover = "Shooting";
             name = "James Harden";
+            Getstats();
         }
 
         public void DonovanMitchell()
@@ -24,7 +25,8 @@ namespace Projekt
             wingspan = 208;
             weight = 98;
             takeover = "Slashing";
-            name = "Donovan Mitchell"; 
+            name = "Donovan Mitchell";
+            Getstats();
         }
 
         public void DevinBooker()
@@ -34,6 +36,7 @@ namespace Projekt
             weight = 95;
             takeover = "Playmaking";
             name = "Devin Booker";
+            Getstats();
         }
 
 
